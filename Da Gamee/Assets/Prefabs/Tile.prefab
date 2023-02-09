@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1
+  m_AspectRatio: NaN
 --- !u!114 &1614414930140748503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c495f22b4c61f44b65cbaaf29f7d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  icon: {fileID: 1614414929881708861}
+  button: {fileID: 1614414930140748503}
