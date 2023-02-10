@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bdb7639e0bf1314cb775601c5592cde, type: 3}
-  m_Name: Orb
+  m_Name: Circle
   m_EditorClassIdentifier: 
   value: 1
-  sprite: {fileID: 21300000, guid: 300da400c53610d4bab4f0272c462768, type: 3}
+  sprite: {fileID: -2413806693520163455, guid: 9ef787337ee4302479e4a5ddbe51a9df, type: 3}
