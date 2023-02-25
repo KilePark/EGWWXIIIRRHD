@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-//Code documented by Andy Jia and Kyle Park
+//Code documented by Andy @!rmfandyplayz and Kyle @KyleP
 //Whoever tf actually wrote this please for the love of god comment ur goddamn code lmfao
 public sealed class Board : MonoBehaviour
 {
@@ -16,23 +16,23 @@ public sealed class Board : MonoBehaviour
 
 
 
-    public Tile[,] tiles { get; private set;} //Tiles i think? (GUYS FKIN COMMENT UR CODE JEEZ)
+    public Tile[,] tiles { get; private set;} //List of tiles i think? (GUYS FKIN COMMENT UR CODE JEEZ)
 
-    public int Width => tiles.GetLength(dimension:0); //Width of the board
-    public int Height => tiles.GetLength(dimension:1); //Height of the board
+    public int width => tiles.GetLength(dimension:0); //Width of the board
+    public int height => tiles.GetLength(dimension:1); //Height of the board
 
     private readonly List<Tile> _selection = new List<Tile>(); //When a player clicks a tile, it is added to this list to be compared (check for matches)
     private void Awake() => instance = this; //Initializes the game board (I think)
-
+    
     //Initializes the game board and placing tiles in the 2D list/array
     private void Start()
     {
         tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length]; //makes new tile i think  
         
         //This for loop goes over every element within the 2D list "tiles" and assigns a random orb to each tile
-        for (var y = 0; y < Height; y++)
+        for (var y = 0; y < height; y++)
         {    
-            for(var x = 0; x < Width; x++)
+            for(var x = 0; x < width; x++)
             {   
                 var tile = rows[y].tiles[x];
 
@@ -133,8 +133,8 @@ public sealed class Board : MonoBehaviour
     /// <returns></returns>
     private bool CanPop()
     {
-        for (var y = 0; y < Height; y++)
-            for (var x = 0; x < Width; x++)
+        for (var y = 0; y < height; y++)
+            for (var x = 0; x < width; x++)
                 if (tiles[x, y].GetConnectedTiles().Skip(1).Count() >= 2) 
                     return true;
 
@@ -146,9 +146,9 @@ public sealed class Board : MonoBehaviour
     /// </summary>
     private void Pop()
     {
-        for (var y = 0; y < Height; y++)
+        for (var y = 0; y < height; y++)
         {
-            for (var x = 0; x < Width; x++)
+            for (var x = 0; x < width; x++)
             {
                 var tile = tiles[x, y];
 
