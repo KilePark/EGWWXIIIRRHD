@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: GreenOrb
   m_EditorClassIdentifier: 
   value: 1
+  element: green
   sprite: {fileID: 21300000, guid: 25e0600c60e3bfc47b132e248434746f, type: 3}

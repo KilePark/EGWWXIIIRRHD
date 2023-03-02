@@ -143,6 +143,7 @@ public sealed class Board : MonoBehaviour
     
     /// <summary>
     /// Performs thanos snapping the orbs. Self-explanatory
+    /// Passes element type into ScoreCounter
     /// </summary>
     private void Pop()
     {
@@ -159,9 +160,11 @@ public sealed class Board : MonoBehaviour
                 foreach (var connectedTile in connectedTiles)
                 {
                     connectedTile.icon.rectTransform.localScale = Vector3.zero;
-                }
 
-                ScoreCounter.Instance.score += tile.Item.value * connectedTiles.Count();
+                }
+                Debug.Log(message: connectedTiles.Count());
+
+                ScoreCounter.Instance.add_score(tile.Item.element, tile.Item.value * connectedTiles.Count());
 
                 foreach (var connectedTile in connectedTiles)
                 {

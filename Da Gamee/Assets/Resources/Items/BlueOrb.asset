@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: BlueOrb
   m_EditorClassIdentifier: 
   value: 1
+  element: blue
   sprite: {fileID: 21300000, guid: 8700db2b81158d6488571f34bc0abef3, type: 3}
