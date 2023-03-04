@@ -4,5 +4,5 @@ using UnityEngine;
 
 public sealed class Row : MonoBehaviour
 {
-    public Tile[] tiles;
+    public Tile[] tiles; //List of containing Tiles
 }

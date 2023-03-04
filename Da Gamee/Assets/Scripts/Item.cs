@@ -6,6 +6,8 @@ using UnityEngine;
 public sealed class Item : ScriptableObject
 {
     public int value; //points
+
+    public string element; //element type
     
     public Sprite sprite;
 

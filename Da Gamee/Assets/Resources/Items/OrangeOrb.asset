@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: OrangeOrb
   m_EditorClassIdentifier: 
   value: 1
+  element: orange
   sprite: {fileID: 21300000, guid: 9959622ec14a7c944afebbd878d824ad, type: 3}
